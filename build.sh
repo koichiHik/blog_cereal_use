@@ -13,6 +13,9 @@ cd extern/build/
 cmake \
   -D CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} \
   -D CMAKE_INSTALL_PREFIX=${INSTALL_DIR} \
+  -D JUST_INSTALL_CEREAL=ON \
+  -D SKIP_PORTABILITY_TEST=ON \
+  -D SKIP_PERFORMANCE_COMPARISON=ON \
   ../cereal
 make install -j32
 cd ../../
